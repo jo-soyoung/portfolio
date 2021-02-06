@@ -4,6 +4,7 @@ if (window.innerWidth > 1440) {
   const details = document.querySelectorAll('.work-detail');
   const titles = document.querySelectorAll('.work-title-list .work-title');
   const pagers = document.querySelectorAll('.pagers li');
+  const scrollInfo = document.querySelector('.scroll');
   // const btns = document.querySelectorAll("button");
   
   const wLength = works.length;
@@ -147,6 +148,9 @@ if (window.innerWidth > 1440) {
     } else {
       showNext();
     }
+    //remove scroll notification
+    scrollInfo.style.opacity = 0;
+    scrollInfo.style.pointerEvents = `none`;
   }
 
   window.addEventListener('wheel', handleScroll)

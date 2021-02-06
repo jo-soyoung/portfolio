@@ -578,6 +578,74 @@ footer {
     display: block;
   }
 
+  .scroll {
+    width: 80px;
+    text-align: center;
+    transition: transform 0.6s ease-in-out, opacity 0.5s ease,
+      pointer-events 0.5s ease;
+  }
+
+  .scroll-line {
+    position: absolute;
+    left: 10px;
+    bottom: -5px;
+    width: 60px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .scroll-line div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 1px;
+    background-color: #2b292d;
+
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: scroll-line;
+    animation-name: scroll-line;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  @-webkit-keyframes scroll-line {
+    from,
+    5% {
+      width: 0px;
+    }
+    33%,
+    66% {
+      left: 0px;
+      width: 80px;
+    }
+    95%,
+    to {
+      left: 80px;
+    }
+  }
+
+  @keyframes scroll-info-line {
+    from,
+    5% {
+      width: 0px;
+    }
+    33%,
+    66% {
+      left: 0px;
+      width: 80px;
+    }
+    95%,
+    to {
+      left: 80px;
+    }
+  }
+
   .cursor {
     position: absolute;
     width: 3rem;
@@ -613,16 +681,16 @@ footer {
     border-radius: 50%;
     border: 1px solid #2b292d;
     transition: all 0.25s;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
 
   .pagers li.active {
     background-color: #2b292d;
   }
 
-  .pagers li:hover {
+  /* .pagers li:hover {
     background-color: #2b292d;
-  }
+  } */
 
   /* Header */
   header {
@@ -725,6 +793,7 @@ footer {
 
   .about section {
     width: 60vw;
+    max-width: 830px;
     justify-content: flex-start;
   }
 
@@ -757,11 +826,11 @@ footer {
   }
 
   .skill-title.ninety.animate + span::before {
-    width: 15.75vw;
+    width: 11.25vw;
   }
 
   .skill-title.sixty.animate + span::before {
-    width: 10.5vw;
+    width: 7.75vw;
   }
 
   /* Footer */
