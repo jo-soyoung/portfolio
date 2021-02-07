@@ -289,10 +289,12 @@ header.open nav .menu {
   margin-bottom: 8px;
   font-weight: 700;
   font-size: 30px;
+  text-transform: capitalize;
 }
 
 .work-detail {
   font-size: 16px;
+  text-transform: lowercase;
 }
 
 .work-detail span::after {
@@ -681,16 +683,11 @@ footer {
     border-radius: 50%;
     border: 1px solid #2b292d;
     transition: all 0.25s;
-    /* cursor: pointer; */
   }
 
   .pagers li.active {
     background-color: #2b292d;
   }
-
-  /* .pagers li:hover {
-    background-color: #2b292d;
-  } */
 
   /* Header */
   header {
