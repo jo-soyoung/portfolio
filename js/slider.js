@@ -1,11 +1,9 @@
 if (window.innerWidth > 1440) {
   const worklist = document.querySelector('.work-list');
   const works = document.querySelectorAll('.work');
-  const workPics = document. querySelectorAll('.work-pic');
   const details = document.querySelectorAll('.work-detail');
   const titles = document.querySelectorAll('.work-title-list .work-title');
   const pagers = document.querySelectorAll('.pagers li');
-  const mouseCursor = document.querySelector('.cursor');
   const scrollInfo = document.querySelector('.scroll');
   
   const wLength = works.length;
@@ -158,21 +156,4 @@ if (window.innerWidth > 1440) {
   }
 
   window.addEventListener('wheel', handleScroll)
-
-
-  //Cursor Customizing Control
-  for(let workPic of workPics) {
-    workPic.addEventListener('mouseover', () => {
-        mouseCursor.classList.remove('no-display');
-    })
-    workPic.addEventListener('mouseleave', () => {
-        mouseCursor.classList.add('no-display');
-    })
-
-    workPic.addEventListener('mousemove', cursor);
-    function cursor(e) {
-        mouseCursor.style.top = `${e.pageY}px`;
-        mouseCursor.style.left = `${e.pageX}px`;
-    }
-}
 }
