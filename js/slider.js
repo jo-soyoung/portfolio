@@ -1,22 +1,16 @@
 if (window.innerWidth > 1440) {
   const worklist = document.querySelector('.work-list');
   const works = document.querySelectorAll('.work');
+  const workPics = document. querySelectorAll('.work-pic');
   const details = document.querySelectorAll('.work-detail');
   const titles = document.querySelectorAll('.work-title-list .work-title');
   const pagers = document.querySelectorAll('.pagers li');
+  const mouseCursor = document.querySelector('.cursor');
   const scrollInfo = document.querySelector('.scroll');
-  // const btns = document.querySelectorAll("button");
   
   const wLength = works.length;
   let count = 0;
   let delay = 1000;
-  
-  // const [prev, next] = btns;
-  
-  
-  // Btn Control
-  // next.addEventListener("click", showNext);
-  // prev.addEventListener("click", showPrev);
   
   
   // Detail Fade Control
@@ -26,6 +20,16 @@ if (window.innerWidth > 1440) {
   
   function detailFade(i) {
     details[i].style.opacity = 0;
+  }
+
+
+  // Handle Pagers Color
+  function pagerColor(i) {
+     pagers[i].classList.add('active');
+  }
+    
+  function pagerDecolor(i) {
+    pagers[i].classList.remove('active');
   }
   
   
@@ -154,14 +158,21 @@ if (window.innerWidth > 1440) {
   }
 
   window.addEventListener('wheel', handleScroll)
-  
-  
-  // Handle Pagers Color
-  function pagerColor(i) {
-    pagers[i].classList.add('active');
-  }
-  
-  function pagerDecolor(i) {
-    pagers[i].classList.remove('active');
-  }  
+
+
+  //Cursor Customizing Control
+  for(let workPic of workPics) {
+    workPic.addEventListener('mouseover', () => {
+        mouseCursor.classList.remove('no-display');
+    })
+    workPic.addEventListener('mouseleave', () => {
+        mouseCursor.classList.add('no-display');
+    })
+
+    workPic.addEventListener('mousemove', cursor);
+    function cursor(e) {
+        mouseCursor.style.top = `${e.pageY}px`;
+        mouseCursor.style.left = `${e.pageX}px`;
+    }
+}
 }
