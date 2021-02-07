@@ -4,12 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>joSoYoung</title>
+    <title>joSoYoung || Web Publishing</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L59MKM5V5X"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L59MKM5V5X');
+    </script>
+    <!-- End Google Analytics -->
+    <link rel="stylesheet" href="./css/intro.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/webs.css">
-    <!-- Google Analytics API Link -->
 </head>
 <body>
+    <div class="intro" aria-hidden="true">
+    </div>
+
+    <div class="slider" aria-hidden="true"></div>
+
     <header>
         <h1 class="logo">
             <a href="/" aria-label="Go home">joSoYoung</a>
@@ -185,7 +200,7 @@
                     <div class="about">
                         <span class="category">about</span>
                         <p>포케 음식점의 웹사이트 작업입니다.<br/>
-                        젊은 세대 사이에서 간편한 건강식으로 주목받으며 인기를 끌고 있다는 상품의 특성상 배달 및 포장을 쉽게 할 수 있도록 장바구니 기능을 구현하는데 집중하였습니다.</p>
+                        젊은 세대 사이에서 간편한 건강식으로 주목받으며 인기를 끌고 있는 상품의 특성상 배달 및 포장을 쉽게 할 수 있도록 장바구니 기능을 구현하는데 집중하였습니다.</p>
                     </div>
                     
                     <div class="outer-wrapper">
@@ -458,6 +473,8 @@
 
     <div class="desktop-only cursor no-display" aria-hidden="true">view</div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
+    <script src="./js/intro-pages.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/cursor.js"></script>
     <script src="./js/horizontalScroll.js"></script>
