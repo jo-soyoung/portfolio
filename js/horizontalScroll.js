@@ -10,11 +10,6 @@ workSection.addEventListener('wheel', e => {
         e.preventDefault();
         workSection.scrollLeft += e.deltaY;
     }
-    
-    workSection.scrollBy({
-        left: e.deltaY * 0.5,
-        behavior: 'smooth'
-    });
 
     //remove scroll notification
     scrollInfo.style.opacity = 0;
